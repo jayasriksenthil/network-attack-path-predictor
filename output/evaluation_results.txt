@@ -1,0 +1,10 @@
+seed 0: lstm {'top1': 0.034, 'top3': 0.117, 'top5': 0.156}  markov {'top1': 0.094, 'top3': 0.194, 'top5': 0.238}  freq {'top1': 0.032, 'top3': 0.146, 'top5': 0.202}  (n=4946)
+seed 1: lstm {'top1': 0.02, 'top3': 0.142, 'top5': 0.166}  markov {'top1': 0.081, 'top3': 0.106, 'top5': 0.127}  freq {'top1': 0.0, 'top3': 0.06, 'top5': 0.092}  (n=952)
+seed 2: lstm {'top1': 0.077, 'top3': 0.238, 'top5': 0.307}  markov {'top1': 0.173, 'top3': 0.272, 'top5': 0.334}  freq {'top1': 0.046, 'top3': 0.141, 'top5': 0.199}  (n=3515)
+seed 3: lstm {'top1': 0.156, 'top3': 0.325, 'top5': 0.399}  markov {'top1': 0.082, 'top3': 0.111, 'top5': 0.192}  freq {'top1': 0.001, 'top3': 0.2, 'top5': 0.203}  (n=1398)
+seed 4: lstm {'top1': 0.063, 'top3': 0.188, 'top5': 0.201}  markov {'top1': 0.028, 'top3': 0.042, 'top5': 0.118}  freq {'top1': 0.054, 'top3': 0.066, 'top5': 0.17}  (n=4296)
+
+MEAN over 5 random flow-holdout splits
+lstm {'top1': 0.07, 'top3': 0.202, 'top5': 0.246}
+markov {'top1': 0.092, 'top3': 0.145, 'top5': 0.202}
+frequency {'top1': 0.027, 'top3': 0.123, 'top5': 0.173}

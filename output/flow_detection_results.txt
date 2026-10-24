@@ -1,0 +1,27 @@
+Training rows: 129,688   Features: 79   Evaluated on: separate test set (278,270 rows)
+
+                          precision    recall  f1-score   support
+
+                  benign      1.000     0.991     0.995    139135
+                     bot      0.382     0.990     0.552       489
+                    ddos      0.999     0.999     0.999     32006
+           dos goldeneye      0.984     0.999     0.992      2573
+                dos hulk      0.998     0.999     0.998     57531
+        dos slowhttptest      0.967     0.992     0.980      1374
+           dos slowloris      0.994     0.994     0.994      1449
+             ftp patator      1.000     0.999     1.000      1983
+              heartbleed      0.000     0.000     0.000         2
+            infiltration      1.000     0.556     0.714         9
+                portscan      0.999     0.999     0.999     39701
+             ssh patator      0.995     0.999     0.997      1474
+  web attack brute force      0.580     0.702     0.635       376
+web attack sql injection      0.000     0.000     0.000         5
+          web attack xss      0.301     0.442     0.358       163
+
+                accuracy                          0.995    278270
+               macro avg      0.747     0.778     0.748    278270
+            weighted avg      0.997     0.995     0.995    278270
+
+NOTE: rows from the same attack are near-duplicates and the dataset's splits are random rows, so these scores
+are optimistic for brand-new traffic. Report them as 'on held-out rows of the same dataset'.
+Classes with only a handful of examples (e.g. Web Attack SQL Injection, Infiltration) are not reliable.
