@@ -11,7 +11,6 @@ TACTIC_ORDER = ['Reconnaissance', 'Initial Access', 'Execution', 'Persistence', 
 
 
 def run(domain, scan=None, model='lstm', flows=None):
-    """domain: site to scan (None to skip). flows: optional CSV/XLSX of network flows to classify (see flow_detector)."""
     if domain or scan:
         scan = scan or scan_domain(domain)
         mappings = map_indicators(scan)
@@ -29,7 +28,7 @@ def run(domain, scan=None, model='lstm', flows=None):
         predictions = predict_next(net, ordered, stoi, itos, k=5, exclude_seen=True)
         path = rollout(net, ordered, stoi, itos, steps=4)
         info = dict(MODEL_INFO)
-    else:                                            # no LSTM model file, or nothing observed
+    else:                                           
         predictions, path = [], []
         info = dict(MODEL_INFO)
     risk = score(mappings, predictions)

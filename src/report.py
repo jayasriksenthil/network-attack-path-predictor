@@ -1,5 +1,4 @@
-"""Stage 5 - Report. Everything here is based on the LSTM forecast.
-Uses Claude when ANTHROPIC_API_KEY is set (sending only structured evidence); otherwise a template."""
+
 import json, os
 from .attack_names import name
 
