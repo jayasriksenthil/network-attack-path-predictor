@@ -1,8 +1,4 @@
-"""Build ordered ATT&CK technique sequences from the MITRE CTID Attack Flow corpus (Apache-2.0).
-Source: https://github.com/center-for-threat-informed-defense/attack-flow  (corpus/*.afb)
-Each .afb is a graph of actions; edges give the real order of steps in a documented intrusion.
-Output: data/sequences.json  -> [{"flow": name, "seq": ["T1566.001", "T1059.001", ...]}, ...]
-"""
+
 import glob, json, os, subprocess, sys
 from collections import defaultdict
 

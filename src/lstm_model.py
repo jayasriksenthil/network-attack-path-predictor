@@ -1,4 +1,3 @@
-"""LSTM next-technique predictor trained on ordered ATT&CK sequences (MITRE Attack Flow corpus)."""
 import json, os, random
 import torch, torch.nn as nn
 
