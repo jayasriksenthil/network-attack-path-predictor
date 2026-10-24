@@ -3,9 +3,7 @@ import socket
 import time
 
 
-# ==========================================
-# 1. GET IP ADDRESS OF THE DOMAIN
-# ==========================================
+
 
 domain = input("Enter domain: ")
 
@@ -18,9 +16,6 @@ except socket.gaierror:
     exit()
 
 
-# ==========================================
-# 2. START TIME
-# ==========================================
 
 start_time = time.time()
 
@@ -35,9 +30,6 @@ ack_count = 0
 fin_count = 0
 
 
-# ==========================================
-# 3. PACKET PROCESSING FUNCTION
-# ==========================================
 
 def process_packet(packet):
 
@@ -57,20 +49,14 @@ def process_packet(packet):
 
     packet_size = len(packet)
 
-    # --------------------------------------
-    # Forward traffic
-    # Our computer → target
-    # --------------------------------------
+
 
     if dst == target_ip:
 
         forward_packets += 1
         forward_bytes += packet_size
 
-    # --------------------------------------
-    # Backward traffic
-    # Target → our computer
-    # --------------------------------------
+
 
     elif src == target_ip:
 
@@ -78,9 +64,6 @@ def process_packet(packet):
         backward_bytes += packet_size
 
 
-    # ======================================
-    # TCP FLAGS
-    # ======================================
 
     if TCP in packet:
 
@@ -96,9 +79,7 @@ def process_packet(packet):
             fin_count += 1
 
 
-# ==========================================
-# 4. CAPTURE PACKETS
-# ==========================================
+
 
 print("\nCapturing traffic to/from", domain)
 print("Press Ctrl+C to stop...\n")
@@ -118,9 +99,6 @@ except PermissionError:
     exit()
 
 
-# ==========================================
-# 5. CALCULATE FLOW FEATURES
-# ==========================================
 
 end_time = time.time()
 
@@ -140,9 +118,6 @@ else:
     packets_per_second = 0
 
 
-# ==========================================
-# 6. DISPLAY FLOW
-# ==========================================
 
 print("\n========== FLOW INFORMATION ==========")
 
