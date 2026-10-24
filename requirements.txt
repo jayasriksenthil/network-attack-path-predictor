@@ -1,0 +1,12 @@
+requests
+dnspython
+networkx
+matplotlib
+streamlit
+anthropic
+torch
+pandas
+pyarrow
+scikit-learn
+joblib
+openpyxl
