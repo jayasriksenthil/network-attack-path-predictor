@@ -1,7 +1,4 @@
-"""Stage 3 - Evidence -> ATT&CK mapping.
-These are EXPOSURE mappings: a weakness that would make a technique easier, not proof
-that the technique was used. Each mapping carries evidence + a confidence + a type label.
-"""
+
 import re
 
 TECH = {

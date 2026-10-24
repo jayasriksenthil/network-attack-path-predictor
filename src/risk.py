@@ -1,4 +1,3 @@
-"""Risk scoring: weighted from observed mappings plus a smaller contribution from predictions."""
 
 def score(mappings, predictions):
     obs = sum(m["confidence"] for m in mappings) * 18

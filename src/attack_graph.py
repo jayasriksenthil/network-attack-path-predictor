@@ -1,7 +1,4 @@
-"""Attack-path graph driven by the model's own forecast.
-Left to right:  observed exposures (orange)  ->  LSTM forecast path (teal)
-Extra teal boxes under the path are the other top-ranked first-step candidates.
-Edge labels are LSTM probabilities."""
+
 import textwrap
 import networkx as nx
 from .attack_names import name
